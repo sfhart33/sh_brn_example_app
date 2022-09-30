@@ -2,9 +2,6 @@ library(shiny)
 library(tidyverse)
 library(plotly)
 
-# Define UI for app that draws a histogram ----
-ui <- fluidPage(
-  
 #######################
 # Load Data
   gapminder <- read_csv("gapminder_clean.csv") %>%
@@ -13,7 +10,10 @@ ui <- fluidPage(
   years <- gapminder$Year %>% unique()
   data_type <- gap_col[c(4:18,20)]
 #######################
-  
+
+# Define UI for app that draws a histogram ----
+ui <- fluidPage(
+    
   # App title ----
   titlePanel("Interactive plotting of the gapminder data set, by Sam Hart"),
   
