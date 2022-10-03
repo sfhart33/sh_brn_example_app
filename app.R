@@ -70,7 +70,7 @@ server <- function(input, output) {
   
   output$gapPlot <- renderPlotly({
     
-    plot1 <- gapminder2 %>%
+    plot1 <- gapminder %>%
       filter(Year == input$year) %>%
       ggplot(aes(x = .data[[input$x_ax]], y = .data[[input$y_ax]], size = pop, color = continent, text = `Country Name`)) +
       geom_point()
