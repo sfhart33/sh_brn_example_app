@@ -8,6 +8,7 @@ library(plotly)
     as_tibble()
 # options
   years <- gapminder$Year %>% unique()
+  gap_col <- names(gapminder)
   data_type <- gap_col[c(4:18,20)]
 #######################
 
